@@ -32,6 +32,7 @@ $(document).ready(function() {
         winner = true;
         highlightSquares();
         alert("Player " + playerTurn + " is the winner!");
+        break;
       }
     }
   }
