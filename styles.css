@@ -1,57 +1,67 @@
 body {
-    font-family: "helvetica neue";
+  font-family: "helvetica neue";
 }
 
-
 .board {
-    margin: 0 auto;
-    width: 620px;
-    height: 620px;
-    background: black;
-    padding: 10px;
+  margin: 0 auto;
+  width: 620px;
+  height: 620px;
+  background: black;
+  padding: 10px;
 }
 
 .grid-row {
-    clear: both;
+  clear: both;
 
 }
 .grid-square {
-    border: none;
-    width: 200px;
-    height: 195px;
-    background: white;
-    padding-top: 5px;
-    text-align: center;
-    font-size: 10em;
+  border: none;
+  width: 200px;
+  height: 195px;
+  background: white;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 10em;
 }
 
 .col-1 {
-    float: left;
+  float: left;
 }
 
 .col-2 {
-
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .col-3 {
-    float: right;
+  float: right;
 }
 
 .row-2 {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .button {
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .button.reset {
-    width: 50px;
-    text-align: center;
-    margin: 10px auto;
+  width: 50px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.player1 {
+  background: #c00;
+}
+
+.player2 {
+  background: #00c;
+}
+
+.empty {
+  background: #fff;
 }
 
 
