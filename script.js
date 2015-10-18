@@ -11,6 +11,12 @@ $(document).ready(function() {
   }
 
   function setGame(){
+
+    moveCounter = 0;
+    activePlayer = player1;
+
+    $(".game-status h1").hide();
+
     var squares = $(".grid-square")
     for(i = 0; i < squares.length; i++){
       $(squares[i]).removeClass("player1 player2 highlight");
@@ -18,9 +24,6 @@ $(document).ready(function() {
         $(squares[i]).addClass("empty");
       }
     }
-
-    moveCounter = 0;
-    activePlayer = player1;
 
     $(".board").on("click", ".grid-square", function(){
       if($(this).hasClass("empty")) {
@@ -72,6 +75,8 @@ $(document).ready(function() {
 
         if(win == true && j == 2) {
           highlightSquares(winConditions[i]);
+          displayWinner(player);
+
           return true;
         }
       }
@@ -84,6 +89,10 @@ $(document).ready(function() {
     for(i = 0; i < squares.length; i++) {
       $("#" + squares[i]).addClass("highlight");
     }
+  }
+
+  function displayWinner(winner) {
+    $(".game-status .player" + winner.number).show();
   }
 
   $(".main").on("click", ".button.reset", function(){

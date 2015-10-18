@@ -2,6 +2,19 @@ body {
   font-family: "helvetica neue";
 }
 
+header {
+  text-align: center;
+}
+
+.game-status {
+  height: 2em;
+  margin: 1em;
+}
+
+.game-status h1 {
+  display: none;
+}
+
 .board {
   margin: 0 auto;
   width: 620px;
@@ -57,7 +70,7 @@ body {
 
 }
 
-.player1 span:after {
+.main .player1 > span:after {
   content: "X";
 }
 
@@ -65,7 +78,7 @@ body {
   background: #00c;
 }
 
-.player2 span:after {
+.main .player2 > span:after {
   content: "O";
 }
 
@@ -77,4 +90,8 @@ body {
   background: yellow;
 }
 
-
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
