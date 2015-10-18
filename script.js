@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   function Player (number) {
-    this.moves = [];
     this.number = number;
 
     this.move = function(square) {
@@ -10,8 +9,8 @@ $(document).ready(function() {
     }
   }
 
-  function setGame(){
 
+  function setGame(){
     moveCounter = 0;
     activePlayer = player1;
 
@@ -31,7 +30,6 @@ $(document).ready(function() {
         moveCounter++;
 
         if(checkWin(activePlayer) == true) {
-          console.log("win");
           $(".board").off();
         }else if(moveCounter == 9) {
           alert("Cats game no one wins!");
@@ -47,7 +45,6 @@ $(document).ready(function() {
   }
 
   function checkWin (player) {
-    var playerNumber = "player" + player.number;
 
     var winConditions = [
       ["1-1", "1-2", "1-3"],
@@ -60,6 +57,7 @@ $(document).ready(function() {
       ["1-3", "2-2", "3-1"]
     ];
 
+    var playerNumber = "player" + player.number;
     var win = false;
 
     for(i = 0; i < winConditions.length; i++) {
